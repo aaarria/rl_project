@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: adaptive-blood-drive-api
+    runtime: python
+    plan: free
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt && cp ../transfusion.data ./transfusion.data && cp ../transfusion.names ./transfusion.names
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.12.7"
+      - key: CORS_ORIGINS
+        sync: false

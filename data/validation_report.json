@@ -1,0 +1,289 @@
+{
+  "dataset": {
+    "name": "Blood Transfusion Service Center",
+    "origin": "UCI Machine Learning Repository",
+    "citation": "Yeh, I-Cheng (2008). Blood Transfusion Service Center. UCI Machine Learning Repository. CC BY 4.0.",
+    "paper": "Yeh, Yang, and Ting (2008/2009), Knowledge discovery on RFM model using Bernoulli sequence, Expert Systems with Applications.",
+    "geography": "Hsin-Chu City, Taiwan. Not an Indian facility extract.",
+    "target_definition": "Whether the donor gave blood in March 2007 (1 = yes, 0 = no).",
+    "features": [
+      "Recency: months since last donation",
+      "Frequency: total number of donations",
+      "Monetary: total blood donated in c.c.",
+      "Time: months since first donation"
+    ]
+  },
+  "parsing": {
+    "path": "/Users/serengeti/Downloads/adaptive-blood-drive-scheduling/transfusion.data",
+    "bytes": 12843,
+    "sha256": "96c8e1091b9c037bcaf25a19b24b49d07771cd88689ffd273e056e9e8845ffe7",
+    "physical_lines_including_header": 749,
+    "file_ends_with_newline": false,
+    "header": "Recency (months),Frequency (times),Monetary (c.c. blood),Time (months),\"whether he/she donated blood in March 2007\"",
+    "rows_read": 748,
+    "columns_read": 5,
+    "original_column_names": [
+      "Recency (months)",
+      "Frequency (times)",
+      "Monetary (c.c. blood)",
+      "Time (months)",
+      "whether he/she donated blood in March 2007"
+    ]
+  },
+  "shape": {
+    "rows": 748,
+    "columns": 5,
+    "column_names": [
+      "Recency",
+      "Frequency",
+      "Monetary",
+      "Time",
+      "Donated"
+    ],
+    "expected_rows": 748,
+    "expected_columns": [
+      "Recency",
+      "Frequency",
+      "Monetary",
+      "Time",
+      "Donated"
+    ],
+    "row_count_matches_uci": true,
+    "column_names_match": true
+  },
+  "missing_and_malformed": {
+    "missing_by_column": {
+      "Recency": 0,
+      "Frequency": 0,
+      "Monetary": 0,
+      "Time": 0,
+      "Donated": 0
+    },
+    "malformed_or_non_numeric_cells": 0,
+    "passes": true
+  },
+  "target": {
+    "observed_values": [
+      0.0,
+      1.0
+    ],
+    "encoding_is_binary_0_1": true,
+    "donated_march_2007": 178,
+    "did_not_donate": 570,
+    "positive_rate": 0.23796791443850268,
+    "negative_rate": 0.7620320855614973,
+    "names_file_claims_positive_rate": 0.24,
+    "imbalance": "The March 2007 class is the minority class."
+  },
+  "duplicates": {
+    "extra_copies_of_repeated_rows": 215,
+    "rows_that_belong_to_a_duplicate_group": 275,
+    "unique_rows": 533,
+    "action": "Duplicates were counted and kept. Nothing was deleted from transfusion.data."
+  },
+  "ranges_and_descriptive_statistics": {
+    "Recency": {
+      "count": 748,
+      "missing": 0,
+      "min": 0.0,
+      "max": 74.0,
+      "mean": 9.506684491978609,
+      "std_sample": 8.095395635299214,
+      "median": 7.0
+    },
+    "Frequency": {
+      "count": 748,
+      "missing": 0,
+      "min": 1.0,
+      "max": 50.0,
+      "mean": 5.514705882352941,
+      "std_sample": 5.839307123090025,
+      "median": 4.0
+    },
+    "Monetary": {
+      "count": 748,
+      "missing": 0,
+      "min": 250.0,
+      "max": 12500.0,
+      "mean": 1378.6764705882354,
+      "std_sample": 1459.8267807725063,
+      "median": 1000.0
+    },
+    "Time": {
+      "count": 748,
+      "missing": 0,
+      "min": 2.0,
+      "max": 98.0,
+      "mean": 34.282085561497325,
+      "std_sample": 24.376714368614188,
+      "median": 28.0
+    },
+    "Donated": {
+      "count": 748,
+      "missing": 0,
+      "min": 0.0,
+      "max": 1.0,
+      "mean": 0.23796791443850268,
+      "std_sample": 0.4261243278014516,
+      "median": 0.0
+    }
+  },
+  "consistency": {
+    "monetary_not_equal_to_frequency_times_250": 0,
+    "time_less_than_recency": 0,
+    "note": "Each donation in this study is 250 c.c., so Monetary should equal Frequency \u00d7 250. Time (months since first donation) should be at least Recency."
+  },
+  "names_file_comparison": [
+    {
+      "variable": "Recency",
+      "published_min": 0.03,
+      "actual_min": 0.0,
+      "published_max": 74.4,
+      "actual_max": 74.0,
+      "published_mean": 9.74,
+      "actual_mean": 9.506684491978609,
+      "published_std": 8.07,
+      "actual_std_sample": 8.095395635299214
+    },
+    {
+      "variable": "Frequency",
+      "published_min": 1,
+      "actual_min": 1.0,
+      "published_max": 50,
+      "actual_max": 50.0,
+      "published_mean": 5.51,
+      "actual_mean": 5.514705882352941,
+      "published_std": 5.84,
+      "actual_std_sample": 5.839307123090025
+    },
+    {
+      "variable": "Monetary",
+      "published_min": 250,
+      "actual_min": 250.0,
+      "published_max": 12500,
+      "actual_max": 12500.0,
+      "published_mean": 1378.68,
+      "actual_mean": 1378.6764705882354,
+      "published_std": 1459.83,
+      "actual_std_sample": 1459.8267807725063
+    },
+    {
+      "variable": "Time",
+      "published_min": 2.27,
+      "actual_min": 2.0,
+      "published_max": 98.3,
+      "actual_max": 98.0,
+      "published_mean": 34.42,
+      "actual_mean": 34.282085561497325,
+      "published_std": 24.32,
+      "actual_std_sample": 24.376714368614188
+    },
+    {
+      "variable": "Donated",
+      "published_min": 0,
+      "actual_min": 0.0,
+      "published_max": 1,
+      "actual_max": 1.0,
+      "published_mean": 0.24,
+      "actual_mean": 0.23796791443850268,
+      "published_std": null,
+      "actual_std_sample": 0.4261243278014516
+    }
+  ],
+  "calibration": {
+    "method": "Donors were ranked by Frequency with method='first' so tied frequencies still form four groups of equal size. The rate is the share with Donated = 1.",
+    "equal_count_quartiles": [
+      {
+        "quartile": "Q1_lowest_frequency",
+        "n": 187,
+        "frequency_min": 1.0,
+        "frequency_max": 2.0,
+        "donated_rate": 0.1443850267379679,
+        "donated_count": 27
+      },
+      {
+        "quartile": "Q2",
+        "n": 187,
+        "frequency_min": 2.0,
+        "frequency_max": 4.0,
+        "donated_rate": 0.1657754010695187,
+        "donated_count": 31
+      },
+      {
+        "quartile": "Q3",
+        "n": 187,
+        "frequency_min": 4.0,
+        "frequency_max": 7.0,
+        "donated_rate": 0.28342245989304815,
+        "donated_count": 53
+      },
+      {
+        "quartile": "Q4_highest_frequency",
+        "n": 187,
+        "frequency_min": 7.0,
+        "frequency_max": 50.0,
+        "donated_rate": 0.3582887700534759,
+        "donated_count": 67
+      }
+    ],
+    "natural_frequency_bins": [
+      {
+        "bin": "(0.999, 2.0]",
+        "n": 270,
+        "donated_rate": 0.14444444444444443
+      },
+      {
+        "bin": "(2.0, 4.0]",
+        "n": 149,
+        "donated_rate": 0.18120805369127516
+      },
+      {
+        "bin": "(4.0, 7.0]",
+        "n": 157,
+        "donated_rate": 0.31210191082802546
+      },
+      {
+        "bin": "(7.0, 50.0]",
+        "n": 172,
+        "donated_rate": 0.36627906976744184
+      }
+    ],
+    "natural_bin_note": "Bins from qcut on Frequency with duplicates='drop', so donors who share a frequency stay together.",
+    "lowest_rate": 0.1443850267379679,
+    "highest_rate": 0.3582887700534759,
+    "natural_lowest_rate": 0.14444444444444443,
+    "natural_highest_rate": 0.36627906976744184,
+    "report_lowest": 0.144,
+    "report_highest": 0.366,
+    "lowest_gap": 0.00038502673796791953,
+    "highest_gap": -0.0077112299465240675,
+    "natural_lowest_gap": 0.00044444444444444176,
+    "natural_highest_gap": 0.00027906976744185297,
+    "report_middle_tiers_are_interpolations": {
+      "tier_2": 0.218,
+      "tier_3": 0.292
+    },
+    "middle_tier_note": "The report states that 21.8% and 29.2% are linear interpolations between the endpoint rates, not empirical middle-quartile rates. They are not tested as observed frequencies."
+  },
+  "calibration_note": "The report's 14.4% and 36.6% anchors match frequency bins that keep tied Frequency values together. Those natural bins donate at 0.14444444444444443 and 0.36627906976744184 (gaps 0.00044444444444444176 and 0.00027906976744185297). Forcing four groups of equal size splits donors who share a frequency, and the highest group then sits slightly lower. Middle tiers 21.8% and 29.2% remain the report's interpolations. The simulator uses the published tier rates either way.",
+  "checks": {
+    "row_count_748": true,
+    "five_columns": true,
+    "no_missing_values": true,
+    "binary_target": true
+  },
+  "limitations": [
+    "This file is the UCI Blood Transfusion Service Center donor table from Hsin-Chu City, Taiwan (Yeh, 2008). It does not contain blood types, drive locations, hospital inventory, or Indian weekly turnout.",
+    "The e-RaktKosh / NBTC dataset cited in the project report is not in the workspace.",
+    "transfusion.names prints a descriptive table (Recency mean 9.74, and a 24% / 76% class split) that does not match this file exactly. The audit keeps both and does not overwrite the data.",
+    "Duplicate rows are reported and retained. They were not dropped.",
+    "Simulator pool sizes, seasonality, ABO mix, and demand shares are synthetic assumptions. They are not estimated from these 748 rows, apart from the report's use of frequency-quartile return rates as loyalty anchors."
+  ],
+  "not_in_this_file": [
+    "ABO and Rh blood types",
+    "Drive location or time slot",
+    "Hospital stock or shortage",
+    "Indian weekly turnout",
+    "e-RaktKosh or NBTC facility records"
+  ]
+}
